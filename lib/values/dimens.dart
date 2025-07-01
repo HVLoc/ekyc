@@ -13,4 +13,12 @@ class AppDimens {
   static const double sizeTextSupperLarge = 28;
   static const double sizeTextAvatar = 30;
   static const double padding78 = 78;
+
+
+  static const double paddingSize5 = 5.0;
+  static const double paddingSize10 = 10.0;
+  static const double paddingSize15 = 15.0;
+  static const double size45 = 45;
+  static const double iconLarge = 36;
+
 }

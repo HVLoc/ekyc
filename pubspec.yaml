@@ -7,16 +7,23 @@ environment:
   flutter: ">=3.3.0"
 
 dependencies:
-  camera: ^0.10.5+9
+  asn1lib: ^1.6.5
+  camera: 0.10.6
+  dmrtd:
+    git:
+      url: https://github.com/HVLoc/dmrtd
+      ref: master
   flutter:
     sdk: flutter
+  flutter_svg: ^2.1.0
   get: ^4.6.5
   google_fonts: ^6.2.1
   google_mlkit_face_detection: ^0.11.0
   image: 4.3.0
-  loading_overlay_pro: ^2.1.1
-  percent_indicator: ^4.2.5
-  plugin_platform_interface: ^2.0.2
+  intl: ^0.19.0
+  loading_overlay_pro: 2.1.1
+  mobile_scanner: 5.2.3
+  percent_indicator: 4.2.5
 
 dev_dependencies:
   flutter_lints: ^3.0.0
@@ -75,7 +82,6 @@ flutter:
   # For details regarding fonts in packages, see
   # https://flutter.dev/custom-fonts/#from-packages
   assets:
-
     # assets start
     # GENERATED CODE - DO NOT MODIFY MANUALLY
     # **************************************************************************

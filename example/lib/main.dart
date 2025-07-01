@@ -61,7 +61,7 @@ class _HomePageState extends State<HomePage> {
             Center(
               child: TextButton(
                 onPressed: () async {
-                  _resultImg = await _ekycPlugin.gotoEKYC();
+                  _resultImg = await _ekycPlugin.gotoLiveNess();
                   setState(() {});
                 },
                 child: const Text('Start Ekyc'),

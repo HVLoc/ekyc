@@ -3,6 +3,7 @@ import 'dart:io';
 import 'dart:math';
 
 import 'package:camera/camera.dart';
+import 'package:ekyc/base/base.src.dart';
 import 'package:ekyc/values/values.src.dart';
 import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
@@ -11,10 +12,9 @@ import 'package:image/image.dart' as img;
 
 import '../live_ness_kyc.src.dart';
 
-class LiveNessKycController extends GetxController {
+class LiveNessKycController extends BaseLoadingGetx {
   late CameraController cameraController;
 
-  RxBool isShowLoading = false.obs;
   Rx<Uint8List?> imageTemp = Rx<Uint8List?>(null);
   String urlRecordVideoTemp = "";
   late List<CameraDescription> cameras;
@@ -176,17 +176,6 @@ class LiveNessKycController extends GetxController {
   }
 
   void randomListQuestion() {
-    // for (int j = 0; j < listSequence.length; j++) {
-    //   listRadonNumber
-    //       .add(LiveNessCollection.listMapOderAction[listSequence[j]] ?? 0);
-    // }
-    // if (listRadonNumber.isNotEmpty) {
-    //   for (int i = 0; i < listRadonNumber.length; i++) {
-    //     randomIndex = listRadonNumber[i];
-    //     _addListQuestion(randomIndex);
-    //     // listRadonNumber.removeAt(i);
-    //   }
-    // } else {
     for (int i = 0; i < AppConst.currentStepMax; i++) {
       var rng = Random();
       randomIndex = rng.nextInt(numbers.length);
@@ -203,7 +192,6 @@ class LiveNessKycController extends GetxController {
       _addListQuestion(numbers[randomIndex]);
       numbers.removeAt(randomIndex);
     }
-    // }
   }
 
   void _addListQuestion(int index) {

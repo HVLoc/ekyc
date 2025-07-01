@@ -4,20 +4,6 @@ Widget _body(LiveNessKycController controller) {
   return _buildCapturePage(controller);
 }
 
-Widget buildLoadingOverlay(
-    LiveNessKycController controller, WidgetCallback child,
-    {Color? colorIcon}) {
-  return Obx(
-    () => LoadingOverlayPro(
-      progressIndicator: const CupertinoActivityIndicator(
-        color: Colors.white,
-      ),
-      isLoading: controller.isShowLoading.value,
-      child: child(),
-    ),
-  );
-}
-
 Widget _buildCapturePage(LiveNessKycController controller) {
   return Stack(
     children: [
@@ -207,7 +193,7 @@ Visibility _buttonStart(LiveNessKycController controller) {
             await controller.startStreamPicture();
           },
           style: ElevatedButton.styleFrom(
-            backgroundColor: AppColors.colorlueX,
+            backgroundColor: AppColors.colorBlueX,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(8.0),
             ),
