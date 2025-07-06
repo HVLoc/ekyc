@@ -4,7 +4,7 @@ Widget _body(ScanNfcKycController controller) {
   return Container(
     height: Get.height,
     width: Get.width,
-    color: AppColors.white,
+    color: AppColors.colorTextWhite,
     child: Column(
       children: [
         Expanded(
@@ -79,21 +79,21 @@ Widget _body(ScanNfcKycController controller) {
                         textAlign: TextAlign.center,
                       ),
                     ),
-                    UtilWidget.sizedBox10,
+                    const SizedBox(height: 10),
                     TextUtils(
                       text: LocaleKeys.nfcInfo_content1.tr,
                       availableStyle: StyleEnum.bodySmall,
                       color: AppColors.colorNeutral2,
                       maxLine: 3,
                     ),
-                    UtilWidget.sizedBox5,
+                    const SizedBox(height: 5),
                     TextUtils(
                       text: LocaleKeys.nfcInfo_content2.tr,
                       availableStyle: StyleEnum.bodySmall,
                       color: AppColors.colorNeutral2,
                       maxLine: 3,
                     ),
-                    UtilWidget.sizedBox5,
+                    const SizedBox(height: 5),
                     TextUtils(
                       text: LocaleKeys.nfcInfo_content3.tr,
                       availableStyle: StyleEnum.bodySmall,
@@ -121,10 +121,10 @@ Widget _buildButtonNfcContinue(ScanNfcKycController controller) {
           LocaleKeys.nfcInfo_action.tr,
           () async => await controller.scanNfc(),
           isLoading: controller.isShowLoading.value,
-          backgroundColor: AppColors.colorlueX,
+          backgroundColor: AppColors.colorBlueX,
         ),
       ),
-      UtilWidget.sizedBox7,
+      const SizedBox(height: 7),
 
       // ButtonUtils.buildButton("Quét CHIP với NFC", () async {
       //   await controller.scanNfc();

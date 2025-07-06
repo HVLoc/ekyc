@@ -1,4 +1,7 @@
+import 'package:ekyc/assets.dart';
+import 'package:ekyc/values/values.src.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 
@@ -35,10 +38,10 @@ class NfcDialog extends GetView<NfcDialogController> {
                   ? LocaleKeys.nfcDialog_nfcWaiting.tr
                   : LocaleKeys.nfcDialog_dialogContent.tr,
               availableStyle: StyleEnum.bodyMedium,
-              color: AppColors.colorBack,
+              color: Colors.black,
               maxLine: 3,
               textAlign: TextAlign.center,
-            ).paddingAll(AppDimens.paddingSmaller),
+            ).paddingAll(AppDimens.paddingSize5),
             buildProgressBar(controller),
             UtilWidget.buildButton(
               LocaleKeys.nfcDialog_dialogCancel.tr,
@@ -48,10 +51,10 @@ class NfcDialog extends GetView<NfcDialogController> {
                 controller.isReading.value = false;
               },
               // isLoading: controller.isShowLoading.value,
-              backgroundColor: AppColors.colorPrimary3,
+              backgroundColor: AppColors.colorTextWhite,
               border:
-                  const BorderSide(color: AppColors.colorPrimary1, width: 1),
-              colorText: AppColors.colorPrimary1,
+                  const BorderSide(color: AppColors.lightPrimaryColor, width: 1),
+              colorText: AppColors.lightPrimaryColor,
             ).paddingAll(AppDimens.paddingMedium)
           ],
         ).paddingOnly(bottom: AppDimens.paddingSmall));
@@ -68,19 +71,19 @@ class NfcDialog extends GetView<NfcDialogController> {
             lineHeight: 8,
             alignment: MainAxisAlignment.center,
             percent: controller.processQuantity.value / controller.maxProcess,
-            progressColor: AppColors.colorlueX,
+            progressColor: AppColors.colorBlueX,
             barRadius: const Radius.circular(AppDimens.paddingSmallest),
           ).paddingOnly(
               top: AppDimens.paddingSmallest,
               bottom: AppDimens.paddingSmallest),
         ),
-        UtilWidget.sizedBoxWidth10,
+        const SizedBox(height: 10),
         Visibility(
           visible: controller.processQuantity.value > 0,
           child: TextUtils(
             text: "${controller.processQuantity.value * 10}%",
             availableStyle: StyleEnum.titleSmall,
-            color: AppColors.colorPrimary1,
+            color: AppColors.lightPrimaryColor,
             maxLine: 1,
             textAlign: TextAlign.center,
           ).paddingOnly(bottom: AppDimens.paddingSmallest),

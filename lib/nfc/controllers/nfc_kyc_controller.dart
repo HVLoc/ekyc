@@ -4,7 +4,6 @@ import 'package:get/get.dart';
 
 import '../../base/base.src.dart';
 import '../../nfc_dialog/nfc_dialog.src.dart';
-import '../../values/const.dart';
 import '../../values/values.src.dart';
 
 class ScanNfcKycController extends BaseLoadingGetx with WidgetsBindingObserver {

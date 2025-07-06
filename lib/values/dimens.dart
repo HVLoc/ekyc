@@ -1,5 +1,8 @@
 class AppDimens {
   static const double iconVerySmall = 24;
+  static const double paddingSmallest = 4.0;
+
+  static const double paddingSmall = 12.0;
   static const double defaultPadding = 16.0;
   static const double paddingMedium = 20.0;
   static const double sizeBorderNavi = 30.0;
@@ -14,11 +17,9 @@ class AppDimens {
   static const double sizeTextAvatar = 30;
   static const double padding78 = 78;
 
-
   static const double paddingSize5 = 5.0;
   static const double paddingSize10 = 10.0;
   static const double paddingSize15 = 15.0;
   static const double size45 = 45;
   static const double iconLarge = 36;
-
 }

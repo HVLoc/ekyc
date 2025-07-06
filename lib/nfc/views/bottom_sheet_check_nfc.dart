@@ -1,4 +1,5 @@
 import 'package:ekyc/assets.dart';
+import 'package:ekyc/base/base.src.dart';
 import 'package:ekyc/values/values.src.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -97,8 +98,8 @@ class BottomSheetCheckNfc extends StatelessWidget {
         //   }
         // });
       },
-      backgroundColor: AppColors.white,
-      colorText: AppColors.colorlueX,
+      backgroundColor: AppColors.colorTextWhite,
+      colorText: AppColors.colorBlueX,
     ).paddingSymmetric(vertical: AppDimens.paddingSmall);
   }
 

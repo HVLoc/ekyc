@@ -20,4 +20,7 @@ class AppColors {
 
   static const Color colorTextWhite = Colors.white;
   static const Color colorComment = Color(0xFFACB1B6);
+
+  static const Color colorTitleAppbar = Color(0xFF2B343C);
+  static const Color lightPrimaryColor = Color(0xff36A4F8);
 }

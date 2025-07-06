@@ -8,9 +8,12 @@ import 'package:dmrtd/extensions.dart';
 import 'package:dmrtd/src/proto/can_key.dart';
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
-class NfcDialogController extends BaseGetxControllerContract {
-  final AppControllerContract appController = Get.find<AppControllerContract>();
+import '../base/base.src.dart';
+import '../nfc/model/nfc_model.src.dart';
+
+class NfcDialogController extends BaseLoadingGetx {
 
   // final NfcController nfcController = Get.find();
   //

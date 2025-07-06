@@ -76,4 +76,5 @@ class LocaleKeys {
       'Cài đặt và tìm kiếm “NFC“.';
   static const nfcDialog_titleNotAvailable = 'NFC không khả dụng';
   static const nfcDialog_notAvailable = 'Thiết bị của bạn không hỗ trợ NFC \n';
+  static const nfcDialog_contact = 'Liên hệ';
 }
